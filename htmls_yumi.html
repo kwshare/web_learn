@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的HTML页面</title>
+</head>
+<body>
+<hr color="orange" size="3"/>
+<font color="orange" face="黑体" size="6">这是常见的标签</font>
+<p>我的个人档案</p>
+<p>姓名：玉米</p>
+<p>年龄：18</p>
+<p>个人介绍：测试工程师</p>
+
+<p>
+    头像：<img src="yumi.png"><br/>
+    更多内容请点击：<a href="https://www.baidu.com" target="_blank">百度一下</a><br/>
+</p>
+
+<hr color="orange" size="3"/>
+<font color="orange" face="宋体" size="6">表格标签</font><br/>
+<font color="aqua" size="3">普通表格</font><br/>
+<table border="1" width="300" height="300">
+    <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+    </tr>
+    <tr>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+    </tr>
+    <tr>
+        <td>g</td>
+        <td>h</td>
+        <td>i</td>
+    </tr>
+</table>
+<font color="aqua" size="3">表格合并</font>
+<table border="1" width="300" height="300">
+    <tr>
+        <td colspan="2">a</td>
+        <td rowspan="2">c</td>
+    </tr>
+    <tr>
+        <td rowspan="2">d</td>
+        <td>e</td>
+    </tr>
+    <tr>
+        <td colspan="2">h</td>
+
+    </tr>
+</table>
+
+<hr color="orange" size="3"/>
+<font color="orange" face="黑体" size="6">表单标签</font>
+<form action="http://vip.biancheng.net/login.php" method="post" name="formName">
+    性别：<input type="radio" name="sex" value="girl" id="girl" checked="checked"/>女
+    <input type="radio" value="boy" id="boy" name="sex"/>男<br/>
+    爱好：<input type="checkbox" name="runing" id="run" value="run"/>跑步
+    <input type="checkbox" name="reading" id="read" value="read"/>阅读
+    <input type="checkbox" name="shopping" id="shop" value="shop"/>购物<br/>
+    用户名：<input type="text" name="user" id="user"/><br/>
+    密&nbsp;&nbsp;&nbsp;码：<input type="password" name="passwd" id="passwd"/><br/>
+    资料：<input type="file"/><br/>
+    隐藏：<input type="hidden"/><br/>
+    下拉框：<select>
+    <option value="1">苹果手机</option>
+    <option value="2" selected="selected">小米手机</option>
+    <option value="3">华为手机</option>
+    <option value="3">黑莓手机</option>
+</select><br/>
+    文本域：<textarea cols="50" rows="5"></textarea><br/>
+    普通按钮：<input type="button" value="普通按钮"/><br/>
+    重置按钮：<input type="reset" value="重置按钮"/><br/>
+    提交按钮：<input type="submit" value="提交按钮"/><br/>
+    时间选项：<input type="time" value="time"/><br/>
+    日期选项：<input type="date" value="date"/><br/>
+    月份选项：<input type="month" value="month"/><br/>
+
+
+    <!--
+        特殊属性：
+        disabled="disabled"  禁用表单元素,作用于所有
+        readonly="readonly"  只能作用于输入框（日历）
+        checked="checked"	  用于单选框默认选中
+        selected="selected"   用于下拉框默认选中
+    -->
+
+</form>
+
+<hr color="orange" size="3"/>
+<font color="orange" face="隶书" size="6">框架集，框架，子框架</font><br/>
+<iframe src="https://www.baidu.com"></iframe> <!--子框架-->
+
+</body>
+</html>

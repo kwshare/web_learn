@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这是我的JS网页</title>
+
+<!--    <script language="JavaScript" src="js_yum.js"></script>-->
+    <script language="JavaScript">
+        //案例一
+        var dream1_content = "财富自由";
+
+        function dream1() {
+            document.getElementById("results").value = dream1_content;
+        }
+
+        function dream2() {
+            var dream2_content = "工作自由";
+            document.getElementById("results").value = dream2_content;
+        }
+
+        function dream3() {
+            document.getElementById("results").value = "家庭幸福";
+        }
+
+        //案例二 弹窗
+        function ale() {
+            alert("操作成功！");
+        }
+
+        function con() {
+            res = confirm("请问你要删除此商品吗？");
+            if (res == true) {
+                alert("删除！");
+            }
+        }
+
+        function pro() {
+            res = prompt("请输入要删除商品的的编号！");
+            document.getElementById("number").value = res;
+        }
+
+        //案例三 计算
+        function count() {
+            var data_number = document.getElementById("data_number").value;
+            data_number_int = parseInt(data_number)
+            var data_per = document.getElementById("data_per").value;
+            data_per_int = parseInt(data_per)
+
+            if (data_number !== "" && data_per !== "") {
+                if (!isNaN(data_number_int) && !isNaN(data_per_int)) { //isNaN表示不是一个数字
+                    var mode = document.getElementById("mode").value;
+                    mode = parseInt(mode); //parseInt表示把字符串转成整形
+                    switch (mode) {
+                        case 9:
+                        case 8:
+                        case 7:
+                        case 6:
+                            var data_count = data_number * data_per * (mode / 10);
+                            break;
+                        default:
+                            alert("请选择支付方式！")
+                    }
+                    document.getElementById("data_final").value = data_count;
+
+
+                } else {
+                    alert("Q币数量和Q币单价只能输入数字")
+                }
+
+            } else {
+                alert("Q币数量和Q币单价不能为空")
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+<hr color="orange" size="3"/>
+<!--案例一：点击按钮内容自动填充到输入框-->
+<form>
+    <input type="button" value="梦想一" onclick="dream1()"/><br/>
+    <input type="button" value="梦想二" onclick="dream2()"/><br/>
+    <input type="button" value="梦想三" onclick="dream3()"/><br/>
+    <input type="text" id="results" value=""><br>
+
+</form>
+<hr color="orange" size="3"/>
+
+<!--案例二：弹窗-->
+<input type="button" value="点击触发alert弹窗" onclick="ale()"><br>
+<input type="button" value="点击触发confirm弹窗" onclick="con()"><br>
+<input type="button" value="点击触发prompt弹窗" onclick="pro()"><br>
+<p>商品编号：<input type="text" id="number"></p>
+<hr color="orange" size="3"/>
+
+<!--案例三：Q币充值-->
+<p>充钱规则：根据不同的支付方式，有不同的打折，最终确定成交价格？<br/></p>
+<p>支付方式：
+    <select id="mode">
+        <option value="0">--请选择支付方式--</option>
+        <option value="9">现金支付（9折）</option>
+        <option value="8">支付宝支付（8折）</option>
+        <option value="7">微信支付（7折）</option>
+        <option value="6">银联支付（6折）</option>
+    </select>
+</p>
+<br>
+
+<p>Q币数量：<input type="text" id="data_number"/><font color="red">不能为空，只能是数字</font></p>
+<p>Q币单价：<input type="text" id="data_per"/><font color="red">不能为空，只能是数字</font></p>
+<p>最终成交价格：<input type="text" id="data_final"/></p>
+<input type="button" value="计算" onclick="count()"/></br>
+<hr color="orange" size="3"/>
+
+</body>
+</html>
